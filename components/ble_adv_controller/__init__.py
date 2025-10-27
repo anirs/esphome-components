@@ -1,6 +1,5 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
-from esphome.cpp_generator import LOG_STR
 from esphome.core import ID
 from esphome.const import (
     CONF_DURATION,
@@ -21,6 +20,7 @@ from .const import (
     CONF_BLE_ADV_SEQ_DURATION,
     CONF_BLE_ADV_SHOW_CONFIG,
 )
+from esphome.cpp_generator import LOG_STR
 
 AUTO_LOAD = ["esp32_ble", "select", "number"]
 DEPENDENCIES = ["esp32"]
