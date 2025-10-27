@@ -152,4 +152,8 @@ async def to_code(config):
     cg.add(var.set_handler(hdl))
     cg.add(var.set_encoding_and_variant(config[CONF_BLE_ADV_ENCODING], config[CONF_VARIANT]))
     cg.add(var.set_min_tx_duration(config.get(CONF_DURATION, 200), 100, 500, 10))
-    cg.add(var.set_max_tx_duration(config.get(CONF_BLE_ADV_MAX_DURATION, 3000
+    cg.add(var.set_max_tx_duration(config.get(CONF_BLE_ADV_MAX_DURATION, 3000)))
+    cg.add(var.set_seq_duration(config.get(CONF_BLE_ADV_SEQ_DURATION, 100)))
+    cg.add(var.set_reversed(config.get(CONF_REVERSED, False)))
+    forced_id = config.get(CONF_BLE_ADV_FORCED_ID, config[CONF_ID].id)
+    cg.add(var.set_forced_id(forced_id))
