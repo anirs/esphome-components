@@ -1,5 +1,6 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
+from esphome.cpp_generator import LOG_STR
 from esphome.core import ID
 from esphome.const import (
     CONF_DURATION,
